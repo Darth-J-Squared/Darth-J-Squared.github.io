@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+/*
+@font-face {
+    font-family: Wiescher-Design;
+    src: url('fonts/this.woff');
+}
+*/
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Constants */
+:root {
+    --fm: 10px;    /* frame margin */
+    --tm: 10px;    /* table margin*/
+    --ch: 30px;    /* height of search bar and button*/
+    --gw: 253px;   /* gradient width*/
+    --bbw: 3px;    /* button border width*/
+    --bor: groove; /* border style */
+}
+
+body {
+    background-color: black;
+}
+
+#frame {
+    margin: var(--fm);
+    background-clip: content-box;
+    background-color: #1F1F1F;
+    border-radius: 10px;
+    border-style: var(--bor);
+}
+
+#title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: white;
+}
+
+#star {
+    display: inline-block;
+    margin-left: var(--tm);
+}
+
+#line1 {
+    margin: var(--tm);
+}
+
+#calculator {
+    font-family: 'Times New Roman', Times, serif;
+    border-top-style: var(--bor); /* Side border excluded to prevent double stacked borders*/
+}
+
+#leftGroup {
+    border-right-style: var(--bor);
+    border-width: var(--bbw);
+}
+
+#rightGroup {
+    width: max-content;
+    float: right;
+}
+
+h2 {
+    font-size: 25px;
+    color: white;
+    margin: var(--fm);
+}
+
+#searchControls {
+    margin-left: var(--fm);
+    margin-bottom: var(--fm);
+}
+
+#searchBar {
+    height: var(--ch);
+    border-style: solid;
+    border-width: var(--bbw);
+}
+
+button {
+    height: var(--ch);
+    margin-left: calc(var(--fm)/2);
+    border-width: var(--bbw);
+}
+
+#gradient {
+    height: var(--ch);
+    width: var(--gw);
+    border-style: solid;
+    border-color: black;
+    border-width: var(--bbw);
+    margin-left: 12px;
+    margin-bottom: var(--fm);
+    background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(0,255,0,1));
+    background-image: linear-gradient(to right,  rgba(0,0,0,1), rgba(255,255,255,1));
+}
+
+#score {
+    border-right-style: var(--bor);
+    border-top-style: var(--bor);
+    border-width: var(--bbw);
+}
