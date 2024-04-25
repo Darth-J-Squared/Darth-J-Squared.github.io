@@ -11,5 +11,5 @@ label {
 .graph {
   width: 50%;
   display: flex;
-  border-radius: 2rem;
+  border-radius: 5rem;
 }
