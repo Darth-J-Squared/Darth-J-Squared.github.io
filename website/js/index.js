@@ -10,10 +10,11 @@ document.getElementById("calcBttn").addEventListener("click", function() {
 });
 
 
-$.ajax({
+/*$.ajax({
     type: "POST",
     url: "python/calculator.py",
     data: { param: text}
   }).done(function( o ) {
      // do something
   });
+*/
