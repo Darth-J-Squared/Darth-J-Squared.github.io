@@ -1,5 +1,5 @@
 import sys
-file = open("../../backup/individuals.csv", "r")
+file = open("../../assets/individuals.csv", "r")
 file.readline()
 
 ID = input("What Person ID are you looking for?")
