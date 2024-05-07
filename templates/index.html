@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- *NOTE*: the "templates" folder MUST be named "templates". It must also be in the root directory -->
+<!-- Only .html files can be inside the templates folder because flask expects them to be there -->
+<!-- This is our home html page for Family Promise Data Analyzer -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title >Family Promise Data Analyzer</title>
+        <!-- website we used to generate hte icon: https://favicon.io/favicon-converter/ -->
+        <link charset="UTF-8" rel="icon" href="../static/icon/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../static/css/style.css"> <!-- Styles -->
+        <script charset="UTF-8" src="../static/js/index.js"></script>
+        <!-- We're acessing Google's api jquery script instead of storing the file in the project repository -->
+    </head>
+    <body>
+        <div id="frame">
+            <table id="line1">
+                <tr>
+                    <td id="title">Family Promise Data Analyzer</td>
+                    <td><img charset="UTF-8" id="star" src="../static/img/FP-star-gold.png" alt="FP-Star"></td>
+                </tr>
+            </table>
+            <div id="calculator">
+                <table>
+                    <tr>
+                        <td id="leftGroup">
+                            <h2>Client Stability Calculator</h2>
+                            <table id="searchControls">
+                                <tr>
+                                    <td><input id="searchBar" type="text" maxlength="8" placeholder="Client ID"></td>
+                                    <td><button id="calcBttn" type="button">Calculate</button></td>
+                                </tr>
+                            </table>
+                            <div id="gradient"></div>
+                        </td>
+                        <td id="rightGroup">
+                            <h2>Changeable Attributes:</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="score">
+                            {% block userScore %}
+                            {% endblock %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Add the form here -->
+        </div>
+    </body>
+</html>
