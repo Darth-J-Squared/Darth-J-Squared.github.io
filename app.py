@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for, render_template, request
+from calculate import calculate
 app = Flask(__name__)
 
 # This home() function is executed when the user goes to the home page. The test.html file is displayed to the user
@@ -8,7 +9,7 @@ def home():
 
 @app.route("/userScore", methods=["POST"])
 def userScore():
-    UserID = request.form['searchBar']
+    UserID = calculate(request.form['searchBar'])
     print(UserID)
     return render_template("userScore.html", display=UserID)
 
