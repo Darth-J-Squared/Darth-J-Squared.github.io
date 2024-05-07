@@ -1,6 +1,4 @@
-
-
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
 app = Flask(__name__)
 
 # This home() function is executed when the user goes to the home page. The test.html file is displayed to the user
@@ -10,7 +8,9 @@ def home():
 
 @app.route("/userScore", methods=["POST"])
 def userScore():
-    return render_template("userScore.html", context="Testing")
+    UserID = request.form['searchBar']
+    print(UserID)
+    return render_template("userScore.html", display=UserID)
 
 
 if __name__ == '__main__':
