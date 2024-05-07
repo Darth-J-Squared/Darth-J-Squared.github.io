@@ -28,7 +28,12 @@
                             <table id="searchControls">
                                 <tr>
                                     <td><input id="searchBar" type="text" maxlength="8" placeholder="Client ID"></td>
-                                    <td><button id="calcBttn" type="button">Calculate</button></td>
+
+                                    <td>
+                                        <form action="/userScore" method="post">
+                                            <button id="calcBttn" type="submit">Calculate</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             </table>
                             <div id="gradient"></div>
@@ -40,6 +45,7 @@
                     <tr>
                         <td id="score">
                             {% block userScore %}
+                                <h2>Score:</h2>
                             {% endblock %}
                         </td>
                     </tr>
